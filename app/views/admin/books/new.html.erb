@@ -1,0 +1,32 @@
+<div class="container-fluid" id="management">
+  <div class="row content">
+    <%= render "layouts/sidenav" %>
+    <div class="dashboard col-sm-9">
+      <div class="well">
+        <%= form_for [:admin, @book] do |f| %>
+          <h4><%= t ".add_book" %>:</h4>
+          <%= render "shared/error_messages", object: @book %>
+          <%= f.label :image_url %>
+          <%= f.text_field :image, class: "form-control" %>
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control" %>
+          <%= f.label :author %>
+          <%= f.text_field :author_id, class: "form-control" %>
+          <%= f.label :page %>
+          <%= f.text_field :page, class: "form-control" %>
+
+          <%= f.label :category %>
+          <%= f.collection_select :category_id, @categories, :id, :name %>
+
+          <%= f.label :publisher %>
+          <%= f.collection_select :publisher_id, @publishers, :id, :name %>
+
+          <%= f.label :description %>
+          <%= f.text_area :description, class: "form-control" %>
+          <%= f.submit t(".submit"), class: "btn btn-primary" %>
+          <%= link_to t(".cancel"), admin_books_path, class: "btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

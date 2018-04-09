@@ -2,6 +2,9 @@ en:
   flash:
     danger: "Invalid email/password combination"
     success: "Welcome to the Library!"
+    book_create: "Book create!"
+    login: "Please login!"
+    delete_user: "User deleted!"
   layouts:
     header:
       account: "Account"
@@ -13,6 +16,7 @@ en:
       profile: "Profile"
       setting: "Settings"
       signup: " Signup"
+      user: "Users"
     footer:
       about: "About"
       contact: "Contact"
@@ -20,6 +24,13 @@ en:
       news: "News"
     application:
       title: "Library Management"
+    sidenav:
+      management: "Management"
+      dashboard: "Dashboard"
+      request: "Requests"
+      user: "Users"
+      book: "Books"
+      author: "Authors"
   button:
     submit: "Submit"
   categories:
@@ -31,11 +42,41 @@ en:
     sales_marketing: "Sales Marketing"
     startup: "StartUp"
     story: "Story"
+  admin:
+    title: "Admin management"
+    books:
+      book:
+        add: "Add"
+        all_books: "All books"
+        category: "Category"
+        description: "Description"
+        id: "Id"
+        image: "Image"
+        page: "Page"
+        publisher: "Publisher"
+        title: "Title"
+      create-book:
+        add_new: "Add a new book"
+        create: "Create"
+      index:
+        all_books: "All books"
+        category: "Category"
+        description: "Description"
+        id: "Id"
+        image: "Image"
+        list: "List books"
+        page: "Page"
+        publisher: "Publisher"
+        title: "Title"
+      new:
+        submit: "Submit"
+        add_book: "Add a new book"
+        cancel: "Cancel"
   books:
     index:
       all_books: "All books"
       detail: "DETAILS"
-      list: "List Books"
+      list: "List books"
       next: "Next"
       previous: "Previous"
     show:
@@ -52,4 +93,5 @@ en:
   sessions:
     new:
       login: "Login"
+
 

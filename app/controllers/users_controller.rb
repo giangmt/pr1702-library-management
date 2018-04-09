@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: [:edit, :update, :destroy]
+
+  def index
+    @users = User.select_user.paginate page: params[:page], per_page: Settings.users.page
+  end
+
   def new
     @user = User.new
   end
@@ -19,8 +25,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    User.find params[:id].destroy
+    flash[:success] = t ".delete_user"
+    redirect_to users_url
+  end
+
   private
+
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit :name, :email, :password, :password_confirmation
   end
 end

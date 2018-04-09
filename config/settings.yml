@@ -1,5 +1,14 @@
+books:
+  page: 10
+users:
+  page: 10
 user:
   validates:
     name_maximum: 50
     email_maximum: 200
     password_minimum: 6
+book:
+  validates:
+    description_maximum: 300
+book_form:
+  description: 3
