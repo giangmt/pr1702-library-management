@@ -1,0 +1,7 @@
+<% if logged_in? %>
+  <%= form_for @borrow do |f| %>
+    <%= f.label :borrow %>
+    <%= f.text_field %>
+  <% end %>
+<% else %>
+<% end %>
