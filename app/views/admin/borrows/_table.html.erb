@@ -1,0 +1,26 @@
+<% @borrows.each do |borrow| %>
+  <tr>
+    <td><%= borrow.user.name %></td>
+    <td><%= borrow.book.name %></td>
+    <td><%= borrow.date %></td>
+    <td><%= borrow.status %></td>
+    <td class="btn-group">
+    <% if borrow.status == Settings.borrows.pending %>
+      <p>
+        <%= render "accepted", borrow: borrow %>
+      </p>
+      <p>
+        <%= render "discard", borrow: borrow %>
+      </p>
+    <% elsif borrow.status == Settings.borrows.accept %>
+      <p>
+        <%= render "discard", borrow: borrow %>
+      </p>
+    <% elsif borrow.status == Settings.borrows.discard %>
+      <p>
+        <%= render "accepted", borrow: borrow %>
+      </p>
+    <% end %>
+    </td>
+  </tr>
+<% end %>

@@ -6,6 +6,8 @@ en:
     login: "Please login!"
     delete_user: "User deleted!"
     request_success: "Request success!"
+    reject: "Reject complete!"
+    book_nil: "Not found book!"
   layouts:
     header:
       account: "Account"
@@ -73,6 +75,24 @@ en:
         submit: "Submit"
         add_book: "Add a new book"
         cancel: "Cancel"
+    borrows:
+      request:
+        action: "Action"
+        all_request: "All Book Requests"
+        book: "Book"
+        date: "Return date"
+        destroy: "Reject"
+        id: "Id"
+        name: "Username"
+        status: "Status"
+      accepted:
+        accepted: "Accept"
+      discard:
+        discard: "Discard"
+      index:
+        request: "Book Requests"
+      update:
+        update_success: "Update successfully!"
   books:
     index:
       all_books: "All books"

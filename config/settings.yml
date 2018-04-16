@@ -2,6 +2,8 @@ books:
   page: 10
 users:
   page: 10
+borrows:
+  page: 10
 user:
   validates:
     name_maximum: 50
@@ -12,3 +14,7 @@ book:
     description_maximum: 300
 book_form:
   description: 3
+borrows:
+  accept: "accepted"
+  discard: "discard"
+  pending: "pending"
