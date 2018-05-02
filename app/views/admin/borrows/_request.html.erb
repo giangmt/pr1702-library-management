@@ -1,0 +1,16 @@
+<h2><%= t ".all_request" %></h2>
+<table class="table table-hover">
+  <thead class="table-title">
+    <tr>
+      <th><%= t ".name" %></th>
+      <th><%= t ".book" %></th>
+      <th><%= t ".date" %></th>
+      <th><%= t ".status" %></th>
+      <th><%= t ".action" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render "table" %>
+  </tbody>
+</table>
+<%= will_paginate @borrows %>
