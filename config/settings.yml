@@ -18,3 +18,6 @@ borrows:
   accept: "accepted"
   discard: "discard"
   pending: "pending"
+notice:
+  confirm: "Are you sure?"
+

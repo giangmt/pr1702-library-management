@@ -11,6 +11,7 @@ en:
   layouts:
     header:
       account: "Account"
+      book_request: "Book Request"
       categories: "Categories"
       home: " Home"
       library: "Library"
@@ -80,6 +81,7 @@ en:
         action: "Action"
         all_request: "All Book Requests"
         book: "Book"
+        confirm: "Are you sure?"
         date: "Return date"
         destroy: "Reject"
         id: "Id"
@@ -119,5 +121,8 @@ en:
   sessions:
     new:
       login: "Login"
-
-
+  borrows:
+    request:
+      return: "Return"
+    index:
+      request: "Book Requests"

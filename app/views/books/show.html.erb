@@ -4,30 +4,30 @@
   <%= render "request_book" %>
 <% else %>
   <div class="container-fluid">
-  <div class="col-sm-9">
-    <h3><%= @book.name %> - <%= @book.author.name %></h3>
-    <div class="col-sm-3">
-      <div class="thumbnail">
-        <%= image_tag @book.image %>
+    <div class="col-sm-9">
+      <h3><%= @book.name %> - <%= @book.author.name %></h3>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <%= image_tag @book.image %>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <h5><%= t ".author" %>: <%= link_to @book.author.name %></h5>
+        <h5><%= t ".category" %>: <%= link_to @book.category.name %></h5>
+        <h5><%= t ".publisher" %>: <%= link_to @book.publisher.name %></h5>
+        <p><%= @book.description %></p>
+        <p><%= t ".invite_read" %>
+        <strong><%= @book.author.name %> - <%= @book.name %>!</strong></p>
+      </div>
+      <div class="col-sm-12">
+        <h4><%= t ".comment" %>:</h4>
+        <form role="form">
+          <div class="form-group">
+            <textarea class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success"><%= t ".submit" %></button>
+        </form>
       </div>
     </div>
-    <div class="col-sm-9">
-      <h5><%= t ".author" %>: <%= link_to @book.author.name %></h5>
-      <h5><%= t ".category" %>: <%= link_to @book.category.name %></h5>
-      <h5><%= t ".publisher" %>: <%= link_to @book.publisher.name %></h5>
-      <p><%= @book.description %></p>
-      <p><%= t ".invite_read" %>
-      <strong><%= @book.author.name %> - <%= @book.name %>!</strong></p>
-    </div>
-    <div class="col-sm-12">
-      <h4><%= t ".comment" %>:</h4>
-      <form role="form">
-        <div class="form-group">
-          <textarea class="form-control" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success"><%= t ".submit" %></button>
-      </form>
-    </div>
   </div>
-</div>
 <% end %>

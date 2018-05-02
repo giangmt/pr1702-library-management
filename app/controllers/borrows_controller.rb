@@ -1,6 +1,11 @@
 class BorrowsController < ApplicationController
   before_action :logged_in_user, only: [:create]
 
+  def index
+    @borrows = Borrow.load_by_order.paginate page: params[:page],
+      per_page: Settings.borrows.page
+  end
+
   def new
     @borrow = Borrow.new
   end
@@ -17,6 +22,17 @@ class BorrowsController < ApplicationController
       @borrow.save
       flash[:success] = t ".request_success"
       redirect_to books_path
+    end
+  end
+
+  def destroy
+    @borrow = Borrow.find params[:id]
+    if @borrow.nil?
+      redirect_to books_path
+    else
+      @borrow.destroy ? flash[:success] = t(".return_success")
+        : flash[:danger] = t(".can't_return")
+      redirect_to borrows_path
     end
   end
 
