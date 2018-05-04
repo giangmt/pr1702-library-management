@@ -1,0 +1,16 @@
+<% @borrows.each do |borrow| %>
+  <tr>
+    <td><%= borrow.book.name %></td>
+    <td><%= borrow.date %></td>
+    <td><%= borrow.status %></td>
+    <td class="btn-group">
+      <% if borrow.status == Settings.borrows.pending %>
+        <p>
+          <%= link_to t(".return"), borrow,
+            method: :delete, data: { confirm: Settings.notice.confirm }, class: "btn btn-danger" %>
+        </p>
+        <p>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

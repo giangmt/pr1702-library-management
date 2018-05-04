@@ -1,0 +1,25 @@
+<% provide :title, t(".request") %>
+
+<div class="container-fluid" id="management">
+  <div class="row content">
+    <div class="dashboard col-sm-9">
+      <div class="well">
+        <h2><%= t ".all_request" %></h2>
+        <table class="table table-hover">
+          <thead class="table-title">
+            <tr>
+              <th><%= t ".book" %></th>
+              <th><%= t ".date" %></th>
+              <th><%= t ".status" %></th>
+              <th><%= t ".action" %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "request" %>
+          </tbody>
+        </table>
+        <%= will_paginate @borrows %>
+      </div>
+    </div>
+  </div>
+</div>
