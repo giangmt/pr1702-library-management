@@ -1,0 +1,15 @@
+<%= provide :title, @author.name %>
+
+<div class="container-fluid" id="author">
+  <div class="col-sm-9">
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <%= image_tag @author.image %>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <h3><%= @author.name %></h3>
+      <p><%=@author.description %></p>
+    </div>
+  </div>
+</div>
