@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
 
   def index
-    @books = Book.paginate page: params[:page], per_page: Settings.books.page
+    @books = Book.search(params[:search]).paginate page: params[:page], per_page: Settings.books.page
   end
 
   def show
